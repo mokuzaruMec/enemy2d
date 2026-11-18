@@ -27,6 +27,9 @@ public class player : MonoBehaviour
         textoVida.text = "vida: " + vida;
     }
 
+    public void morir(){
+        gameObject.SetActive(false);
+    }
 
     void FixedUpdate()
     {

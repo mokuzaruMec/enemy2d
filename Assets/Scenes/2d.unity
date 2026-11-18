@@ -350,7 +350,7 @@ Transform:
   m_GameObject: {fileID: 379913973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -3.31, z: 0}
+  m_LocalPosition: {x: -2.17, y: -3.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -370,7 +370,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::player
   velocidad: 8
   fuerzaSalto: 30
-  vida: 100
+  vida: 3
+  textoVida: {fileID: 1135902999}
 --- !u!1 &1089021537
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +383,7 @@ GameObject:
   - component: {fileID: 1089021540}
   - component: {fileID: 1089021539}
   - component: {fileID: 1089021538}
+  - component: {fileID: 1089021541}
   m_Layer: 7
   m_Name: vida
   m_TagString: Untagged
@@ -419,7 +421,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -499,6 +501,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1089021541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089021537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0785e170272c49449b5a649eedd6382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::darvida
 --- !u!1 &1135902997
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +661,7 @@ GameObject:
   - component: {fileID: 1404300277}
   - component: {fileID: 1404300276}
   - component: {fileID: 1404300275}
+  - component: {fileID: 1404300278}
   m_Layer: 7
   m_Name: muerte
   m_TagString: Untagged
@@ -684,7 +699,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -764,6 +779,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1404300278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404300274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45527016e97b50b42a14dece98e67866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::quitarvida
 --- !u!1 &1580862131
 GameObject:
   m_ObjectHideFlags: 0
