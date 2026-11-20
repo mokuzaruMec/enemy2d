@@ -37,8 +37,14 @@ public class player : MonoBehaviour
         //transform.Translate(new Vector3(inputMovimiento.x, 0, inputMovimiento.y) * Time.deltaTime);
         rb.linearVelocity = new Vector2(inputMovimiento.x * velocidad, 0);
 
-        if(Keyboard.current.spaceKey.isPressed){
+        bool hit = Physics2D.Raycast(transform.position, Vector2.down, 1.5f, LayerMask.GetMask("piso"));
+        Debug.DrawRay(transform.position, Vector2.down * 5f, Color.red);
+        Debug.Log(hit);
+
+        if(Keyboard.current.spaceKey.isPressed && hit){
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }
+
+       
     }
 }
